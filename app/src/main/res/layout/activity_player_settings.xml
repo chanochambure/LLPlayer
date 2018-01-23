@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/playerSettingsLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerSettings">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/playerSettingsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TableLayout
+        android:id="@+id/playerSettingsTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/playerSettingsToolbar">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="19sp"
+                android:id="@+id/textAutoStopOption"
+                android:layout_column="1"
+                android:layout_weight="1.00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchAutoStopOption"
+                android:layout_column="2"
+                android:textOff="O"
+                android:textOn="I"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="19sp"
+                android:id="@+id/textAutoReplayOption"
+                android:layout_column="1"
+                android:layout_weight="1.00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchAutoReplayOption"
+                android:layout_column="2"
+                android:textOff="O"
+                android:textOn="I"
+                android:gravity="center"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="19sp"
+                android:id="@+id/textSaveBackupOption"
+                android:layout_column="1"
+                android:layout_weight="1.00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:id="@+id/SaveBackupButton"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="19sp"
+                android:id="@+id/textLoadBackupOption"
+                android:layout_column="1"
+                android:layout_weight="1.00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:id="@+id/LoadBackupButton"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

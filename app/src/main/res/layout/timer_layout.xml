@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/backgroundDialog"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/optionDialogButton"
+        android:layout_below="@+id/space3"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hourSpinner"
+        android:layout_below="@+id/messageDialogText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/space"
+        android:layout_alignEnd="@+id/space"
+        android:spinnerMode="dialog"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minuteSpinner"
+        android:layout_alignTop="@+id/hourSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/space"
+        android:layout_toEndOf="@+id/space"
+        android:spinnerMode="dialog"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space"
+        android:layout_alignBottom="@+id/hourSpinner"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/messageDialogText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+    <Space
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:id="@+id/space3"
+        android:layout_below="@+id/hourSpinner"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

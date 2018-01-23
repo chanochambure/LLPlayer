@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/media_player_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediaPlayerView">
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/backHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription=""
+        android:layout_alignBottom="@+id/albumText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Tittle Text"
+        android:id="@+id/titleText"
+        android:textSize="11sp"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/backHome"
+        android:layout_alignRight="@+id/textSpace"
+        android:layout_alignEnd="@+id/textSpace"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Artist Text"
+        android:textSize="9sp"
+        android:id="@+id/artistText"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_below="@+id/titleText"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/backHome"
+        android:layout_alignRight="@+id/textSpace"
+        android:layout_alignEnd="@+id/textSpace"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Album Text"
+        android:textSize="8sp"
+        android:id="@+id/albumText"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_below="@+id/artistText"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/backHome"
+        android:layout_alignRight="@+id/textSpace"
+        android:layout_alignEnd="@+id/textSpace"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:id="@+id/positionText"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/durationText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/albumText"
+        android:layout_toLeftOf="@+id/albumText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:id="@+id/durationText"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_above="@+id/albumArtImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/repeatButton"
+        android:layout_toEndOf="@+id/repeatButton"/>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/backHome"
+        android:indeterminate="false"
+        android:layout_toRightOf="@+id/positionText"
+        android:layout_alignRight="@+id/repeatButton"
+        android:layout_alignEnd="@+id/repeatButton"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:id="@+id/albumArtImage"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/durationText"
+        android:layout_alignEnd="@+id/durationText"
+        android:contentDescription=""
+        android:layout_above="@+id/nextSong"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/nextSong"
+        android:layout_alignTop="@+id/favoriteButton"
+        android:layout_toRightOf="@+id/playPause"
+        android:layout_toEndOf="@+id/playPause"
+        android:layout_above="@+id/bothSpace"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/prevSong"
+        android:layout_below="@+id/albumArtImage"
+        android:layout_toLeftOf="@+id/playPause"
+        android:layout_toStartOf="@+id/playPause"
+        android:layout_above="@+id/bothSpace"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/playPause"
+        android:layout_alignTop="@+id/nextSong"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/bothSpace"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/favoriteButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/bothSpace"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/shuffleButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/seekBar"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/repeatButton"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/shuffleButton"
+        android:layout_toStartOf="@+id/shuffleButton"
+        android:layout_above="@+id/seekBar"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/bothSpace"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollLyricsView"
+        android:layout_alignBottom="@+id/albumArtImage"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Lyrics Text"
+            android:id="@+id/lyricsText"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textAlignment="center"/>
+    </ScrollView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/repeatButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/repeatButton"
+        android:layout_alignStart="@+id/repeatButton"
+        android:layout_above="@+id/seekBar"
+        android:id="@+id/textSpace"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/timerButton"
+        android:contentDescription=""
+        android:layout_below="@+id/albumArtImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/listButton"
+        android:layout_below="@+id/albumArtImage"
+        android:layout_toRightOf="@+id/textSpace"
+        android:layout_toEndOf="@+id/textSpace"/>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:id="@+id/equalizerButton"
+        android:layout_below="@+id/albumArtImage"
+        android:layout_toRightOf="@+id/timerButton"
+        android:layout_toEndOf="@+id/timerButton"/>
+
+</RelativeLayout>

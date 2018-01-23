@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/frequencyText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar2"
+        android:layout_below="@+id/frequencyText"
+        android:layout_toRightOf="@+id/LowerEqualizerText"
+        android:layout_alignRight="@+id/space2"
+        android:layout_alignEnd="@+id/space2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/LowerEqualizerText"
+        android:layout_alignBottom="@+id/seekBar2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/UpperEqualizerText"
+        android:layout_alignTop="@+id/seekBar2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frequencyText"
+        android:layout_toLeftOf="@+id/UpperEqualizerText"
+        android:layout_toStartOf="@+id/UpperEqualizerText"
+        android:id="@+id/space2"/>
+</RelativeLayout>
