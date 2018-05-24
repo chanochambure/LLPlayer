@@ -916,6 +916,17 @@ public class DBHandler extends SQLiteOpenHelper
         ContentValues values = new ContentValues();
         values.put(KEY_PS_ID_SONG, new_song.getId());
         db.update(TABLE_PLAYLIST_SONGS, values, KEY_PS_ID_SONG + " = ?", new String[]{String.valueOf(lost_song.getId())});
+        new_song.setBookmark(new_song.getBookmark() | lost_song.getBookmark());
+        new_song.addSeconds(lost_song.getSeconds());
+        update_song_db(db, new_song);
+        for(Song song:PlayerVar.getInstance().song_list) {
+            if (song.getId() == new_song.getId()) {
+                song.setBookmark(new_song.getBookmark());
+                song.addSeconds(lost_song.getSeconds());
+                song.set_mod_date(new_song.get_last_mod_date());
+            }
+        }
+        Fun.savePlayerVar(db_context);
         db.close();
         remove_song_references(lost_song);
     }
